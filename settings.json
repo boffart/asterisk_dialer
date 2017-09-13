@@ -1,0 +1,18 @@
+{
+	"host":"127.0.0.1",
+	"port":5038,
+	"username":"admin",
+	"secret":"askozia",
+	"connect_timeout":5,
+	"read_timeout":5,
+	"scheme":"tcp://",
+    "dst_context": "dialer-informer",
+    "local_context": "dialer",
+    "path_to_1c": "http://172.16.32.164/base/hs/database/task",
+    "login_1c": "testrout",
+    "pass_1c": "123",
+    "yandex_api_key": "8dfa3727-667f-4e1b-b628",
+    "speach_dir": "/root/yandex/speach_dir/",
+    "verbose": true,
+    "logfile": "log"
+}

@@ -8,10 +8,10 @@
 	"scheme":"tcp://",
     "dst_context": "dialer-informer",
     "local_context": "dialer",
-    "path_to_1c": "http://172.16.32.164/base/hs/database/task",
+    "path_to_1c": "http://172.16.32.147/base/hs/database/task",
     "login_1c": "testrout",
-    "pass_1c": "123",
-    "yandex_api_key": "8dfa3727-667f-4e1b-b628",
+    "pass_1c": "",
+    "yandex_api_key": "8dfa3727-667f",
     "speach_dir": "/root/yandex/speach_dir/",
     "verbose": true,
     "logfile": "log"

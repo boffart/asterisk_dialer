@@ -23,13 +23,12 @@ class AMI_Listner implements PAMI\Listener\IEventListener {
     public function handle(PAMI\Message\Event\EventMessage $event)
     {
         $dialstatus = $event->getKey('dialstatus');
-        $linkedid   = $event->getKey('idcall');
+        $linkedid   = urlencode($event->getKey('idcall'));
         $cid   		= $event->getKey('cid');
         $time   	= $event->getKey('time');
 		
 	    $this->Verbose("$userevent - $dialstatus $time $linkedid\n");
-	    $this->Verbose("?event=putresult&DIALERSTATUS=$dialstatus&CID=$cid&idcall=$linkedid&TIME=$time");
-	    $this->send_status_call_1c("?event=putresult&DIALERSTATUS=$dialstatus&CID=$cid&=idcall=$linkedid&TIME=$time");
+	    $this->send_status_call_1c("?event=putresult&DIALERSTATUS=$dialstatus&CID=$cid&ID=$linkedid&TIME=$time");
     }
 	
 	private function send_status_call_1c($data_string){

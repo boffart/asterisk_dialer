@@ -42,7 +42,7 @@ function process_action($action){
 	
 	$bindir = __DIR__.'/';
 	process_amigo($bindir.'AMI_Listner.php' , 's', $action);
-	process_amigo($bindir.'Dialer.php'		, 's', $action);
+	process_amigo($bindir.'dialer.php'		, 's', $action);
 }
 
 if('' != "$amigo_action"){

@@ -80,6 +80,7 @@ class Dialer{
 		while ($line = fgets($oSocket)) 
 			$result .= $line;
 		
+		$this->Verbose("--- $result\n");
 		fclose($oSocket);
 		return $result;
 	}

@@ -95,13 +95,13 @@ class TextToSpeachYandex extends OtherFunc{
 	    if(401 == $http_code || 423 == $http_code){
 	    	$autherr = ' Ошибка авторизации.';    
 		}
-		Verbose("Генерация звука Yandex: $autherr Код HTTP $http_code, API key $api_key (проверьте настройки в 1С:Предприятие).");
+		$this->Verbose("Генерация звука Yandex: $autherr Код HTTP $http_code, API key $api_key (проверьте настройки в 1С:Предприятие).");
 	  }
 	  
 	  if($this->rec_file_exists($speech_path.$speech_filename.$speech_extension)){
 		  unlink($speech_path.$speech_filename.$speech_extension);
 	  }
-	  Verbose("Сбой при генерации фразы: ".urldecode($texttospeech)." код HTTP:".$http_code);
+	  $this->Verbose("Сбой при генерации фразы: ".urldecode($texttospeech)." код HTTP:".$http_code);
 	  return null; // Мы не нашли файл записи и не смогли его сгенерировать
 	} // text2speechYandex
 
